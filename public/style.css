@@ -1,0 +1,68 @@
+body {
+  width: 850px;
+  background-color: #efefef;
+}
+#form1,
+#form2 {
+  border: solid 2px black;
+  padding: 20px;
+  width: 650px;
+  background-color: #fff;
+}
+#title,
+#receiptTitle {
+  text-align: center;
+  font-weight: bold;
+}
+#subtitle {
+  text-align: center;
+}
+input#checkout {
+  color: #fff;
+  background-color: black;
+}
+
+#popup {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 5px;
+  border-radius: 10px;
+}
+#popup {
+  background-color: red;
+  margin-bottom: 5px;
+}
+
+#customerTable,
+#receiptTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.tableHeaders {
+  font-weight: bold;
+  text-align: center;
+}
+td,
+th {
+  text-align: left;
+  padding: 0.1rem;
+  border: 1px solid #ddd;
+  margin-left: 5px;
+}
+tr {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+#colspan {
+  text-align: right;
+  margin-left: auto;
+}
+tr td#total {
+  text-align: right;
+  font-weight: bold;
+  margin-right: 10px;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 id="title">Fans of Cars</h1>
+  
+        <h3 id="subtitle">Purchase learning</h2>
+  
+        <form id="form1" action="/" method="post">
+          <div class="row">
+              <div class="six columns">
+                <label for="name">Name</label>
+              </div>
+              <div class="six columns">
+                <input type="text" name="name" id="name" class="u-full-width" autofocus placeholder="First and Last Name" />
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                  <label for="address">Address</label>
+                </div>
+                <div class="six columns">
+                  <input type="text" name="address" id="address" class="u-full-width" placeholder="# house & street name" />
+                </div>
+              </div>
+        
+              <div class="row">
+                <div class="six columns">
+                  <label for="city">City</label>
+                </div>
+                <div class="six columns">
+                  <input type="text" name="city" id="city" class="u-full-width" placeholder="City" />
+                </div>
+              </div>
+        
+              <div class="row">
+                <div class="six columns">
+                  <label for="province">Province</label>
+                </div>
+                <div class="six columns">
+                  <select name="province" id="province" class="u-full-width">
+                    <option value="">-- Select Province --</option>
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon</option>
+                  </select>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="six columns">
+                  <label for="phone">Phone Number</label>
+                </div>
+                <div class="six columns">
+                  <input type="tel" name="phone" id="phone" class="u-full-width" placeholder="XXXXXXXXXX"/>
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="six columns">
+                <label for="email">Email</label>
+              </div>
+              <div class="six columns">
+                <input type="text" name="email" id="email" class="u-full-width" placeholder="email@domain.com"/>
+              </div>
+            </div>
+      
+      
+            <h3 id="subtitle">Buy your favorite cap</h2>
+      
+            <div class="row">
+              <div class="six columns">
+                <label for="jeep">Jeep Cap ($5.75)</label>
+              </div>
+              <div class="six columns">
+                <input type="number" name="jeep" id="jeep" class="u-full-width" placeholder="10"/>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="six columns">
+                <label for="hotdogs">Nissan Cap ($4.50)</label>
+              </div>
+              <div class="six columns">
+                <input type="text" name="nissan" id="nissan" class="u-full-width" placeholder="10"/>
+              </div>
+            </div>
+      
+            
+            <% if(typeof errors !== "undefined") {for(var error of errors){%>
+                <div id="popup"><%= error.msg %></div>
+                <% }} %>
+          
+  
+          <input
+            type="submit"
+            value="Checkout"
+            class="u-full-width"
+            id="checkout" 
+            
+          />
+          
+        </form>
+      </div>
+      
+  </body>
+</html>

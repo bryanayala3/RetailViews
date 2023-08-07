@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3 id="receiptTitle">Your Receipt:</h3>
+    <form id="form2">
+    <table id="customerTable">
+      <tr></tr>
+        <td class="tableHeaders">Name</td>
+        <td><%=name%></td>
+      </tr>
+      <tr>
+        <td class="tableHeaders">Address</td>
+        <td><%=address%></td>
+      </tr>
+      <tr>
+        <td class="tableHeaders">City</td>
+        <td><%=city%></td>
+      </tr>
+      <tr>
+        <td class="tableHeaders">Province</td>
+        <td><%=province%></td>
+      </tr>
+      <tr>
+        <td class="tableHeaders">Phone Number</td>
+        <td><%=phone%></td>
+      </tr>
+      <tr>
+        <td class="tableHeaders">Email</td>
+        <td><%=email%></td>
+      </tr>
+    </table>
+    <table id="receiptTable">
+      <thead><th class='tableHeaders'>Item</th><th class='tableHeaders'>Quantity</th><th class='tableHeaders'>Unit Price</th><th class='tableHeaders'>Total Price</th></thead>
+      <tbody>
+        <% if(item === 1){%>
+          
+          <tr>
+            <td><%= itemName1 %></td>
+            <td><%= jeep %></td>
+            <td>$ <%= priceItem1 %></td>
+            <td>$ <%= (priceItem1*jeep).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Provincial Tax <%= tax*100 %>%</td>
+            <td>$ <%= (tax*priceItem1*jeep).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total</td>
+            <td>$ <%= (tax*priceItem1*jeep+priceItem1*jeep).toFixed(2) %></td>
+          </tr>
+
+        <%}%>
+        <% if(item === 2){%>
+          
+          <tr>
+            <td><%= itemName2 %></td>
+            <td><%= nissan %></td>
+            <td>$ <%= priceItem2 %></td>
+            <td>$ <%= (priceItem2*nissan).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Provincial Tax <%= tax*100 %>%</td>
+            <td>$ <%= (tax*priceItem2*nissan).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total</td>
+            <td>$ <%= (tax*priceItem2*nissan+priceItem2*nissan).toFixed(2) %></td>
+          </tr>
+
+        <%}%>
+        <% if(item === 3){%>
+          
+          <tr>
+            <td><%= itemName1 %></td>
+            <td><%= jeep %></td>
+            <td>$ <%= priceItem1 %></td>
+            <td>$ <%= (priceItem1*jeep).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td><%= itemName2 %></td>
+            <td><%= nissan %></td>
+            <td>$ <%= priceItem2 %></td>
+            <td>$ <%= (priceItem2*nissan).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Provincial Tax <%= tax*100 %>%</td>
+            <td>$ <%= (tax*priceItem1*jeep + tax*priceItem2*nissan).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total</td>
+            <td>$ <%= (tax*priceItem1*jeep+tax*priceItem2*nissan+priceItem2*nissan+priceItem1*jeep).toFixed(2) %></td>
+          </tr>
+
+        <%}%>
+      </tbody>
+    </table>
+  </form>
+  </body>
+</html>
